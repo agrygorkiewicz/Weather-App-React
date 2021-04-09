@@ -1,3 +1,5 @@
+
+
 * {
   margin: 0;
   padding: 0;
@@ -5,21 +7,25 @@
 }
 
 body {
-  font-family: 'montserrat', sans-serif;
+  font-family: 'montseratt', sans-serif;
+  height: 100vh;
 }
 
 .app {
-background-image: url('./assets/clouds.jpg');
-background-size: cover;
-background-position: bottom;
-transition: 0.4 ease-out;
+  background-image: url('./assets/warm.jpg');
+  background-size: cover;
+  background-position: bottom;
+  transition: 0.4 ease;
 }
 
+.app.cold {
+  background-image: url('./assets/cold.jpg');
+}
 
 main {
   min-height: 100vh;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.40));
-  padding:30px;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.35));
+  padding: 25px;
 }
 
 .search-box {
@@ -27,34 +33,40 @@ main {
   margin: 0 0 75px;
 }
 
-.search-box .search {
-display: block;
-width: 100%;
-padding: 15px;
-appearance: none;
-background: none;
-border: none;
-outline: none;
-background-color: rgba(255, 255, 255, 0.5);
-border-radius: 0 0 16px 16px;
-margin-top: -30px;
-box-shadow: 0 7px rgba(0,0,0,0.2);
-color: #313131;
-font-size: 26px;
-transition: 0.4s ease;
+
+.search-box .search-bar {
+  display: block;
+  width: 85%;
+  padding: 20px;
+  text-align: center;
+
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 0px 0px 16px 16px;
+  margin:-25px auto;
+
+  box-shadow: 0px 5px rgba(0, 0, 0, 0.2);
+  color: #313131;
+  font-size: 28px;
+  transition: 0.4s ease;
 }
 
-.search-box .search:focus {
-  background-color: rgba(2225, 225, 255, 0.75);
+.search-box .search-bar:focus {
+  background-color: rgba(255, 255, 255, 0.85);
 }
 
 .location-box .location {
   color: #FFF;
-  font-size: 46px;
+  font-size: 48px;
   font-weight: 500;
   text-align: center;
-  text-shadow: 3px 3px rgba(50,50,70, 0.5);
-  padding:15px;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+  padding: 25px;
+
 }
 
 .location-box .date {
@@ -64,8 +76,14 @@ transition: 0.4s ease;
   font-style: italic;
   text-align: center;
   text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
+ padding: 25px;;
 }
 
+
+
+.weather-box {
+  text-align: center;
+}
 
 .weather-box .temp {
   position: relative;
@@ -74,7 +92,7 @@ transition: 0.4s ease;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
 
-  padding: 15px 25px;
+  padding: 20px 35px;
 
   color: #FFF;
   font-size: 102px;
@@ -90,8 +108,5 @@ transition: 0.4s ease;
   font-size: 48px;
   font-weight: 700;
   text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
-}
-
-.weather-box {
-text-align: center;
+  margin-top: 20px;;
 }
